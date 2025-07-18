@@ -1,12 +1,6 @@
 public  final class Slime extends Monster {
     public Slime(int hp,char suffix,String name){
-        super(hp,suffix);
-        setName(name);
-    }
-
-    @Override
-    public void showStatus() {
-        System.out.println(this.getName()+this.getSuffix()+":HP"+this.getHP());
+        super(name,hp,suffix);
     }
 
     public void attack(Creature target){

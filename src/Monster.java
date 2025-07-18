@@ -3,18 +3,20 @@ public abstract class Monster implements Creature{
     private int hp;
     private char suffix;
 
-    public Monster(int hp, char suffix) {
+    public Monster(String name, int hp, char suffix) {
         this.hp = hp;
         this.suffix = suffix;
+        this.name = name;
     }
-    public boolean isAlive(int life){
-        if(life>0) {
-            return true;
-        }else{
-            return false;
-        }
+    public boolean isAlive(){
+        return this.getHP() > 0;
     }
-    public void showStats() {}
+
+    @Override
+    public void showStatus() {
+        System.out.println(this.getName()+":HP"+this.getHP());
+    }
+
     public String getName(){
         return this.name;
     }
@@ -30,11 +32,7 @@ public abstract class Monster implements Creature{
         this.name = sName;
     }
     public void setHP(int sHP) {
-        if(sHP > 0){
-            this.hp = sHP;
-        }else{
-            this.hp = 0;
-        }
+        this.hp = Math.max(sHP, 0);
     }
     public void setSuffix(char sSuffix) {
         this.suffix = sSuffix;

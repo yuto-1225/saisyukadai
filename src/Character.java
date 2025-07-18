@@ -7,16 +7,12 @@ public abstract class Character implements Creature {
         this.hp = hp;
     }
 
-    public boolean isAlive(int life){
-        if(life>0) {
-            return true;
-        }else{
-            return false;
-        }
+    public boolean isAlive(){
+        return this.getHP() > 0;
     }
 
     public void showStatus() {
-        System.out.println(this.name+":HP"+this.hp);
+        System.out.println(this.getName()+":HP"+this.getHP());
     }
 
     public String getName(){
@@ -31,7 +27,7 @@ public abstract class Character implements Creature {
         this.name = sName;
     }
 
-    public void setHP(int shp){
-        this.hp = shp;
+    public void setHP(int sHP){
+        this.hp = Math.max(sHP, 0);
     }
 }
