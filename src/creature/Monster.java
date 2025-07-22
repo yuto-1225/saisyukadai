@@ -1,4 +1,6 @@
-public abstract class Monster implements Creature{
+package creature;
+
+public abstract class Monster implements Creature {
     private String name;
     private int hp;
     private char suffix;
@@ -8,6 +10,7 @@ public abstract class Monster implements Creature{
         this.suffix = suffix;
         this.name = name;
     }
+    @Override
     public boolean isAlive(){
         return this.getHP() > 0;
     }
@@ -17,6 +20,7 @@ public abstract class Monster implements Creature{
         System.out.println(this.getName()+":HP"+this.getHP());
     }
 
+    @Override
     public String getName(){
         return this.name;
     }
