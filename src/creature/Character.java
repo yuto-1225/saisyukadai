@@ -16,12 +16,12 @@ public abstract class Character implements Creature {
         System.out.println(this.getName()+"は死んでしまった！");
     }
     @Override
-    public boolean isAlive(){
+    public final boolean isAlive(){
         return this.getHP() > 0;
     }
     @Override
     public void showStatus() {
-        System.out.println(this.getName()+":HP"+this.getHP());
+        System.out.println(this.getName()+":HP "+this.getHP());
     }
 
     @Override

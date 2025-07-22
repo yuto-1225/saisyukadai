@@ -6,7 +6,7 @@ public class Sword extends Weapon{
     }
 
     @Override
-    public void attackMessage(){
-        System.out.println("で切りつけた！");
+    public String attackMessage(){
+        return ("で切りつけた！");
     }
 }

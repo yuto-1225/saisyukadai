@@ -6,7 +6,7 @@ public class Dagger extends Weapon{
     }
 
     @Override
-    public void attackMessage() {
-        System.out.println("で素早く切りつけた！");
+    public String attackMessage() {
+        return ("で素早く切りつけた！");
     }
 }

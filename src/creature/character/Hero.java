@@ -12,7 +12,7 @@ public class Hero extends Character {
 
     @Override
     public void attack(Creature target) {
-        System.out.println(this.getName() + " は " +Sword.getName()+getWeapon().attackMessage()+target.getName()+"に10のダメージを与えた！");
-        target.setHP(target.getHP()-getWeapon().getDamage());
+        System.out.println(this.getName() + "は" +this.getWeapon().getName()+this.getWeapon().attackMessage()+target.getName()+"に10のダメージを与えた！");
+        target.setHP(target.getHP()-this.getWeapon().getDamage());
     }
 }

@@ -3,11 +3,11 @@ package weapon;
 public class Wand extends Weapon{
     public Wand() {
         super("魔法の杖",15);
-        this.setCost(15);
+        this.setCost(5);
     }
 
     @Override
-    public void attackMessage(){
-        System.out.println("から魔法を放った！");
+    public String attackMessage(){
+        return ("から魔法を放った！");
     }
 }
