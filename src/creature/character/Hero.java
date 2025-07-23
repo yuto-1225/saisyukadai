@@ -2,6 +2,7 @@ package creature.character;
 
 import creature.Creature;
 import creature.Character;
+import creature.Monster;
 import weapon.Weapon;
 
 public class Hero extends Character {

@@ -15,7 +15,7 @@ public class Wizard extends Character {
     public void magic(Creature target){
         if(this.getMp()!=0) {
             this.setMp(this.getMp() - this.getWeapon().getCost());
-            System.out.println(this.getName() +"は"+this.getWeapon().attackMessage()+ target.getName()+"に3のダメージを与えた！");
+            System.out.println(this.getName() +"は"+this.getWeapon().getName()+this.getWeapon().attackMessage()+ target.getName()+"に3のダメージを与えた！");
             target.setHP(this.getWeapon().getDamage());
         }else{
             System.out.println("MPが足りない！");

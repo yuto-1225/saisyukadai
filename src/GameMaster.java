@@ -75,21 +75,24 @@ public class GameMaster {
         System.out.println("\n"+"味方の総攻撃！");
         while(itty.hasNext()){
             for(Character character:party) {
+                System.out.println(character.getName()+"の攻撃！");
                 for (int i = 0; i < monsters.size(); i++) {
                     System.out.println(i + ">" + monsters.get(i).getName() + monsters.get(i).getSuffix());
                 }
+                System.out.print("攻撃する敵を選んでください>");
                 int mon=scanner.nextInt();
+                System.out.print(character.getName()+"の行動を１か２で選んでください>");
                 int tec=scanner.nextInt();
 
                 switch (tec) {
                     case 1:
-                        if (character instanceof Hero) {
+                        if (character==hero) {
                             character.attack(monsters.get(mon));
                             break;
-                        } else if (character instanceof Wizard) {
+                        } else if (character==wizard) {
                             character.attack(monsters.get(mon));
                             break;
-                        } else if (character instanceof Thief) {
+                        } else if (character==thief) {
                             character.attack(monsters.get(mon));
                             break;
                         }
